@@ -1,0 +1,29 @@
+{% extends 'main/newLayout.html' %}
+{% from "_helper.html" import render_field %}
+{% from "_helper.html" import render_fields %}
+{% from "_helper.html" import render_select_field %}
+{% from "_helper.html" import render_select_fields %}
+{% from "_helper.html" import render_boolean_field %}
+{% from "_helper.html" import render_select_field %}
+{% from "_helper.html" import render_name_fields %}
+
+
+{% block title %}
+<h2 class="text-center">Master Tables</h2>
+{% endblock %}
+{% block content %}
+<div class="container">
+  <form method=post>
+    {{form.hidden_tag()}}
+  
+    
+    {{render_select_field(form.master_type)}}
+    
+  
+   
+ 
+
+    <input type=submit>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+
+<html lang = "en">
+   <head></head>
+   <body>
+      
+       <h3>
+                  <a href = "{{ url_for('pmay.show_all') }}">Master Table</a>
+      </h3> 
+      
+      <hr/>
+      {%- for message in get_flashed_messages() %}
+         {{ message }}
+      {%- endfor %}
+		
+   
+      
+      <table border="1">
+         <thead>
+            <tr>
+                   
+               <th>Name</th>
+               <th>Description</th>
+               
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for contact in contact %}
+    
+               <tr>
+                   <!-- <td>{{contact.contact_id}}</td> -->
+                  <td>{{ contact.code }}</td>
+                  <td>{{ contact.description }}</td>
+                 
+             
+                 
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+      
+   </body>
+</html>
